@@ -1,0 +1,1882 @@
+{
+	"Tape":{
+		"Location":{
+			"1-3":{
+				"es_field_name": "RESERVED",
+				"field_size": 2,
+				"definition": "Reserved Positions",
+				"summary": "These positions are blank"
+			},
+			"4-9":{
+				"es_field_name": "RESERVED",
+				"field_size": 6,
+				"definition": "Certificiate Number",
+				"summary": "These positions are blank."
+			},
+			"10-11":{
+				"es_field_name": "RESERVED",
+				"field_size": 2,
+				"definition": "Reserved Positions",
+				"summary": "N/A"
+			},
+			"12-18":{
+				"es_field_name": "RESERVED",
+				"field_size":7,
+				"definition": "Sequence Number",
+				"summary": "These positions are blank."
+			},
+			"19":{
+				"es_field_name": "record_type",
+				"field_size": 1,
+				"definition": "Record Type",
+				"summary": "Record Type",
+				"values":{
+					"1":"RESIDENTS",
+					"2":"NONRESIDENTS"					
+				}
+			},
+			"20":{
+				"es_field_name": "Resident_Status",
+				"field_size": 1,
+				"definition": "Resident Status",
+				"summary": "Resident Status",
+				"values":{
+					"1":"RESIDENTS",
+					"2":"INTRASTATE NONRESIDENTS",
+					"3":"INTERSTATE NONRESIDENTS",
+					"4":"FOREIGN RESIDENTS"
+				}
+			},
+			"21-22":{
+				"es_field_name": "State_of_Occurrence",
+				"field_size": 2,
+				"defintion": "State of Occurrence",
+				"summary": "State of Occurrence table",
+				"values":{
+					"01":"Alabama",
+					"02":"Alaska",
+					"03":"Arizona",
+					"04":"Arkansas",
+					"05":"California",
+					"06":"Colorado",
+					"07":"Connecticut",
+					"08":"Delaware",
+					"09":"District of Columbia",
+					"10":"Florida",
+					"11":"Georgia",
+					"12":"Hawaii",
+					"13":"Idaho",
+					"14":"Illinois",
+					"15":"Indiana",
+					"16":"Iowa",
+					"17":"Kansas",
+					"18":"Kentucky",
+					"19":"Louisiana",
+					"20":"Maine",
+					"21":"Maryland",
+					"22":"Massachusetts",
+					"23":"Michigan",
+					"24":"Minnesota",
+					"25":"Mississippi",
+					"26":"Missouri",
+					"27":"Montana",
+					"28":"Nebraska",
+					"29":"Nevada",
+					"30":"New Hampshire",
+					"31":"New Jersey",
+					"32":"New Mexico",
+					"33":"New York",
+					"34":"North Carolina",
+					"35":"North Dakota",
+					"36":"Ohio",
+					"37":"Oklahoma",
+					"38":"Oregon",
+					"39":"Pennsylvania",
+					"40":"Rhode Island",
+					"41":"South Carolina",
+					"42":"South Dakota",
+					"43":"Tennessee",
+					"44":"Texas",
+					"45":"Utah",
+					"46":"Vermont",
+					"47":"Virginia",
+					"48":"Washington",
+					"49":"West Virginia",
+					"50":"Wisconsin",
+					"51":"Wyoming",
+					"52":"Puerto Rico", 
+					"53":"Virgin Islands", 
+					"54":"Guam",
+					"61":"American Samoa", 
+					"62":"Northern Marianas" 
+				}
+			},
+			"23-25":{
+				"es_field_name": "County_of_Occurrence",
+				"field_size":3,
+				"definition": "County of Occurrence",
+				"summary": "Counties and county equivalents (independent and coextensive cities) are numbered alphabetically within each State. (Note: To uniquely identify a county, both the State and county codes must be used.) A complete list of counties is shown in the Geographic Code Outline further back in this document."
+			},
+			"26-28":{
+				"es_field_name": "Region_of_County",
+				"dev_note":"These were combined from individual tape locations because of the need to nest Division and Subcode data",
+				"field_size": 1,
+				"definition": "Region",
+				"summary" : "Region of Country",
+				"values":{
+					"1": {
+						"Region":"NORTHEAST",
+						"Division":{
+							"1":{
+								"Division":"New England",
+								"StateSubcode":{
+									"1":"Maine",
+									"2":"New Hampshire",
+									"3":"Vermont",
+									"4":"Massachusetts",
+									"5":"Rhode Island",
+									"6":"Connecticut"
+								}
+							},
+							"2":{
+								"Division":"Middle Atlantic",
+								"StateSubcode":{
+									"1":"New York",
+									"2":"New Jersey",
+									"3":"Pennsylvania"
+								}
+							}
+						}
+					},
+					"2": {
+						"Region":"MIDWEST",
+						"Division":{
+							"3":{
+								"Division":"East North Central",
+								"StateSubcode":{
+									"1": "Ohio",
+									"2": "Indiana",
+									"3": "Illinois",
+									"4": "Michigan",
+									"5": "Wisconsin"
+								}
+							},
+							"4":{
+								"Division": "West North Central",
+								"StateSubcode":{
+									"1": "Minnesota",
+									"2": "Iowa",
+									"3": "Missouri",
+									"4": "North Dakota",
+									"5": "South Dakota",
+									"6": "Nebraska",
+									"7": "Kansas"
+								}
+							}
+						}
+					},
+					"3": {
+						"Region":"SOUTH",
+						"Division":{
+							"5":{
+								"Division":"South Atlantic",
+								"StateSubcode":{
+									"1": "Delaware",
+									"2": "Maryland",
+									"3": "District of Columbia",
+									"4": "Virginia",
+									"5": "West Virginia",
+									"6": "North Carolina",
+									"7": "South Carolina",
+									"8": "Georgia",
+									"9": "Florida"
+								}
+							},
+							"6":{
+								"Division": "East South Central",
+								"StateSubcode":{
+									"1": "Kentucky",
+									"2": "Tennessee",
+									"3": "Alabama",
+									"4": "Mississippi"
+								}
+							},
+							"7":{
+								"Division": "West South Central",
+								"StateSubcode":{
+									"1": "Arkansas",
+									"2": "Louisiana",
+									"3": "Oklahoma",
+									"4": "Texas"
+								}
+							}
+						}
+					},
+					"4": {
+						"Region":"WEST",
+						"Division":{
+							"8":{
+								"Division": "Mountain",
+								"StateSubcode":{
+									"1": "Montana",
+									"2": "Idaho",
+									"3": "Wyoming",
+									"4": "Colorado",
+									"5": "New Mexico",
+									"6": "Arizona",
+									"7": "Utah",
+									"8": "Nevada"
+								}
+							},
+							"9":{
+								"Division": "Pacific",
+								"StateSubcode": {
+									"1": "Washington",
+									"2": "Oregon",
+									"3": "California",
+									"4": "Alaska",
+									"5": "Hawaii"
+								}
+							}
+						}
+					}
+				}
+			},
+			"29-30":{
+				"es_field_name": "State_of_Occurence_Code_Expanded",
+				"definition": "Expanded State of Occurrence Code",
+				"summary": "This item is designed to separately identify New York City records from other New York State records.",
+				"values":{
+					"01":"Alabama",
+					"02":"Alaska",
+					"03":"Arizona",
+					"04":"Arkansas",
+					"05":"California",
+					"06":"Colorado",
+					"07":"Connecticut",
+					"08":"Delaware",
+					"09":"District of Columbia",
+					"10":"Florida",
+					"11":"Georgia",
+					"12":"Hawaii",
+					"13":"Idaho",
+					"14":"Illinois",
+					"15":"Indiana",
+					"16":"Iowa",
+					"17":"Kansas",
+					"18":"Kentucky",
+					"19":"Louisiana",
+					"20":"Maine",
+					"21":"Maryland",
+					"22":"Massachusetts",
+					"23":"Michigan",
+					"24":"Minnesota",
+					"25":"Mississippi",
+					"26":"Missouri",
+					"27":"Montana",
+					"28":"Nebraska",
+					"29":"Nevada",
+					"30":"New Hampshire",
+					"31":"New Jersey",
+					"32":"New Mexico",
+					"33":"New York",
+					"34":"New York City",
+					"35":"North Carolina",
+					"36":"North Dakota",
+					"37":"Ohio",
+					"38":"Oklahoma",
+					"39":"Oregon",
+					"40":"Pennsylvania",
+					"41":"Rhode Island",
+					"42":"South Carolina",
+					"43":"South Dakota",
+					"44":"Tennessee",
+					"45":"Texas",
+					"46":"Utah",
+					"47":"Vermont",
+					"48":"Virginia",
+					"49":"Washington",
+					"50":"West Virginia",
+					"51":"Wisconsin",
+					"52":"Wyoming",
+					"53":"Puerto Rico", 
+					"54":"Virgin Islands", 
+					"55":"Guam",
+					"62":"American Samoa",
+					"63":"Northern Marianas"
+				}
+			},
+			"31-32":{
+				"es_field_name": "State_of_Residence",
+				"definition": "State of Residence",
+				"values":{
+					"01":"Alabama",
+					"02":"Alaska",
+					"03":"Arizona",
+					"04":"Arkansas",
+					"05":"California",
+					"06":"Colorado",
+					"07":"Connecticut",
+					"08":"Delaware",
+					"09":"District of Columbia",
+					"10":"Florida",
+					"11":"Georgia",
+					"12":"Hawaii",
+					"13":"Idaho",
+					"14":"Illinois",
+					"15":"Indiana",
+					"16":"Iowa",
+					"17":"Kansas",
+					"18":"Kentucky",
+					"19":"Louisiana",
+					"20":"Maine",
+					"21":"Maryland",
+					"22":"Massachusetts",
+					"23":"Michigan",
+					"24":"Minnesota",
+					"25":"Mississippi",
+					"26":"Missouri",
+					"27":"Montana",
+					"28":"Nebraska",
+					"29":"Nevada",
+					"30":"New Hampshire",
+					"31":"New Jersey",
+					"32":"New Mexico",
+					"33":"New York",
+					"34":"North Carolina",
+					"35":"North Dakota",
+					"36":"Ohio",
+					"37":"Oklahoma",
+					"38":"Oregon",
+					"39":"Pennsylvania",
+					"40":"Rhode Island",
+					"41":"South Carolina",
+					"42":"South Dakota",
+					"43":"Tennessee",
+					"44":"Texas",
+					"45":"Utah",
+					"46":"Vermont",
+					"47":"Virginia",
+					"48":"Washington",
+					"49":"West Virginia",
+					"50":"Wisconsin",
+					"51":"Wyoming",
+					"52":"Puerto Rico",
+					"53":"Virgin Islands",
+					"54":"Guam",
+					"55":"Canada",
+					"56":"Cuba",
+					"57":"Mexico",
+					"59":"Remainder of the world",
+					"61":"American Samoa",
+					"62":"Northern Marianas"
+				}
+			},
+			"33-35":{
+				"es_field_name": "Count_of_Residence",
+				"definition": "County of residence",
+				"summary": "Counties and county equivalents (independent andcoextensive cities) are numbered alphabetically within each State. (Note: to uniquely identify a county, both the State and county codes must be used.) A complete list of counties is shown in the Geographic Code outline further back in this document. zzz ... Foreign residents "
+			},
+			"36-38":{
+				"es_field_name": "City_of_Residence",
+				"definition": "City of Residence",
+				"summary": "001-nnn ... Cities are numbered alphabetically within each State and identify each city with a population of 10,000 or more in1990. (Note: To uniquely identify a city, both the State and city codes must be used. State, county and city codes may also be used.) 999 ... balance of county ZZZ ... Foreign residents "
+			},
+			"39":{
+				"es_field_name": "Population_Size_of_City_of+Residence",
+				"definition": "Population Size of City of Residence",
+				"values":{
+					"0": "Place of 1,000,000 or more",
+					"1": "...Place of 500,000 to 1,000,000",
+					"2": "...Place of 250,000 to 500,000",
+					"3": "...Place of 100,000 to 250,000",
+					"9": "...All other areas in the U.S.",
+					"Z": "...Foreign residents"
+				}
+			},
+			"40":{
+				"es_field_name": "Metropolitan_Nonmetropolitan_County_of_Residence",
+				"definition": "Metropolitan - Nonmetropolitan County of Residence",
+				"values":{
+					"1": "Metropolitan county",
+					"2": "Nonmetropolitan county",
+					"Z": "Foreign residents "
+				}
+			},
+			"41-43":{
+				"es_field_name": "Region_Division_State_Subcode_Residence",
+				"definition": "Region, Devision and State Subcode of Residence",
+								"values":{
+					"1": {
+						"Region":"NORTHEAST",
+						"Division":{
+							"1":{
+								"Division":"New England",
+								"StateSubcode":{
+									"1":"Maine",
+									"2":"New Hampshire",
+									"3":"Vermont",
+									"4":"Massachusetts",
+									"5":"Rhode Island",
+									"6":"Connecticut"
+								}
+							},
+							"2":{
+								"Division":"Middle Atlantic",
+								"StateSubcode":{
+									"1":"New York",
+									"2":"New Jersey",
+									"3":"Pennsylvania"
+								}
+							}
+						}
+					},
+					"2": {
+						"Region":"MIDWEST",
+						"Division":{
+							"3":{
+								"Division":"East North Central",
+								"StateSubcode":{
+									"1": "Ohio",
+									"2": "Indiana",
+									"3": "Illinois",
+									"4": "Michigan",
+									"5": "Wisconsin"
+								}
+							},
+							"4":{
+								"Division": "West North Central",
+								"StateSubcode":{
+									"1": "Minnesota",
+									"2": "Iowa",
+									"3": "Missouri",
+									"4": "North Dakota",
+									"5": "South Dakota",
+									"6": "Nebraska",
+									"7": "Kansas"
+								}
+							}
+						}
+					},
+					"3": {
+						"Region":"SOUTH",
+						"Division":{
+							"5":{
+								"Division":"South Atlantic",
+								"StateSubcode":{
+									"1": "Delaware",
+									"2": "Maryland",
+									"3": "District of Columbia",
+									"4": "Virginia",
+									"5": "West Virginia",
+									"6": "North Carolina",
+									"7": "South Carolina",
+									"8": "Georgia",
+									"9": "Florida"
+								}
+							},
+							"6":{
+								"Division": "East South Central",
+								"StateSubcode":{
+									"1": "Kentucky",
+									"2": "Tennessee",
+									"3": "Alabama",
+									"4": "Mississippi"
+								}
+							},
+							"7":{
+								"Division": "West South Central",
+								"StateSubcode":{
+									"1": "Arkansas",
+									"2": "Louisiana",
+									"3": "Oklahoma",
+									"4": "Texas"
+								}
+							}
+						}
+					},
+					"4": {
+						"Region":"WEST",
+						"Division":{
+							"8":{
+								"Division": "Mountain",
+								"StateSubcode":{
+									"1": "Montana",
+									"2": "Idaho",
+									"3": "Wyoming",
+									"4": "Colorado",
+									"5": "New Mexico",
+									"6": "Arizona",
+									"7": "Utah",
+									"8": "Nevada"
+								}
+							},
+							"9":{
+								"Division": "Pacific",
+								"StateSubcode": {
+									"1": "Washington",
+									"2": "Oregon",
+									"3": "California",
+									"4": "Alaska",
+									"5": "Hawaii"
+								}
+							}
+						}
+					}
+				}
+			},
+			"44-45":{
+				"es_field_name": "Expanded_State_of_Residence_Code",
+				"definition": "Expanded State of Residence Code",
+				"values":{
+					"01":"Alabama",
+					"02":"Alaska",
+					"03":"Arizona",
+					"04":"Arkansas",
+					"05":"California",
+					"06":"Colorado",
+					"07":"Connecticut",
+					"08":"Delaware",
+					"09":"District of Columbia",
+					"10":"Florida",
+					"11":"Georgia",
+					"12":"Hawaii",
+					"13":"Idaho",
+					"14":"Illinois",
+					"15":"Indiana",
+					"16":"Iowa",
+					"17":"Kansas",
+					"18":"Kentucky",
+					"19":"Louisiana",
+					"20":"Maine",
+					"21":"Maryland",
+					"22":"Massachusetts",
+					"23":"Michigan",
+					"24":"Minnesota",
+					"25":"Mississippi",
+					"26":"Missouri",
+					"27":"Montana",
+					"28":"Nebraska",
+					"29":"Nevada",
+					"30":"New Hampshire",
+					"31":"New Jersey",
+					"32":"New Mexico",
+					"33":"New York",
+					"34":"New York City",
+					"35":"North Carolina",
+					"36":"North Dakota",
+					"37":"Ohio",
+					"38":"Oklahoma",
+					"39":"Oregon",
+					"40":"Pennsylvania",
+					"41":"Rhode Island",
+					"42":"South Carolina",
+					"43":"South Dakota",
+					"44":"Tennessee",
+					"45":"Texas",
+					"46":"Utah",
+					"47":"Vermont",
+					"48":"Virginia",
+					"49":"Washington",
+					"50":"West Virginia",
+					"51":"Wisconsin",
+					"52":"Wyoming",
+					"53":"Puerto Rico",
+					"54":"Virgin Island",
+					"55":"Guam",
+					"56":"Canada",
+					"57":"Cuba",
+					"58":"Mexico",
+					"60":"Remainder of the world",
+					"62":"American Samoa"
+				}
+			},
+			"46-48":{
+				"es_field_name": "NCHS_PMSA_MSA_of_Residence",
+				"definition": "NCHS PMSA/MSA of Residence",
+				"summary": "Primary Metropolitan Statistical Areas and Metropolitan Statistical Areas are those defined by the U.S. Office of Management and Budget (OMB) as of 1990. For New England, the New England County Metropolitan Areas (NECMA) are used. Further back in this document is a list of PMSA=s, MSA=s, NECMA=s, and their component counties.",
+				"values":{
+					"000": "Nonmetropolitan counties",
+					"001-311":"Code range",
+ 					"999": "Area of less than 100,000 population",
+					"ZZZ": "Foreign residents" 
+				}
+			},
+			"49":{
+				"es_field_name": "Population_Size_of_County_of_Occurrence",
+				"definition": "Population Size of County of Occurrence",
+				"values":{
+					"0": "County of 1,000,000 or more",
+					"1": "County of 500,000 to 1,000,000",
+					"2": "County of 250,000 to 500,000",
+					"3": "County of 100,000 to 250,000",
+					"9": "County of less than 100,000"
+				}
+			},
+			"50":{
+				"es_field_name": "Population_Size_of_County_of_Residence",
+				"definition": "Population Size of County of Residence",
+				"values":{
+					"0": "County of 1,000,000 or more",
+					"1": "County of 500,000 to 1,000,000",
+					"2": "County of 250,000 to 500,000",
+					"3": "County of 100,000 to 250,000",
+					"9": "County of less than 100,000",
+					"Z": "Foreign Residence"
+				}
+			},
+			"51":{
+				"es_field_name": "PMSA_MSA_Population_Size",
+				"definition": "PMSA/MSA Population Size",
+				"values":{
+					"1": "Area of 250,000 or more",
+					"2": "Area of 100,000 to 250,000",
+					"9": "Area of less than 100,000 or nonmetropolitan area",
+ 					"Z": "Foreign residents"
+				}
+			},
+			"52-53":{
+				"es_field_name": "Education",
+				"definition": "Education",
+				"values":{
+					"00": "No formal education",
+					"01": "01 Years of elementary school",
+					"02": "02 Years of elementary school",
+					"03": "03 Years of elementary school",
+					"04": "04 Years of elementary school",
+					"05": "05 Years of elementary school",
+					"06": "06 Years of elementary school",
+					"07": "07 Years of elementary school",
+					"08": "08 Years of elementary school",
+					"09": "1 year of high school",
+					"10": "2 years of high school",
+					"11": "3 years of high school",
+					"12": "4 years of high school",
+ 					"13": "1 year of college",
+					"14": "2 years of college",
+ 					"15": "3 years of college",
+ 					"16": "4 years of college",
+					"17": "5 or more years of college"
+				}
+			},
+			"54":{
+				"es_field_name": "Education_Recode",
+				"field_size": 1,
+				"definition": "Education Recode",
+				"values":{
+					"1": "0 - 8 years",
+					"2": "9 - 11 years",
+					"3": "12 years",
+					"4": "13 - 15 years",
+					"5": "16 years or more",
+					"6": "Not stated"
+				}
+			},
+			"55-56":{
+				"es_field_name": "Month_of_Death",
+				"field_size": 2,
+				"definition": "Month of Death",
+				"values":{
+					"01":"January",
+					"02":"February",
+					"03":"March",
+					"04":"April",
+					"05":"May",
+					"06":"June",
+					"07":"July",
+					"08": "August",
+					"09": "September",
+					"10": "October",
+					"11": "November",
+					"12": "December"
+				}
+			},
+			"57-58":{
+				"es_field_name": "RESERVED",
+				"field_size": 2,
+				"definition": "Reserved",
+				"summary": "Blank"
+			},
+			"59":{
+				"es_field_name": "Sex",
+				"field_size": 1,
+				"definition": "Sex",
+				"values":{
+					"1": "Male",
+					"2": "Female"
+				}
+			},
+			"60-61":{
+				"es_field_name": "Detail_Race",
+				"field_size": 2,
+				"definition": "Detail Race",
+				"values":{
+					"01":"White",
+					"02":"Black",
+					"03":"American Indian (includes Aleuts and Eskimos)",
+					"04":"Chinese",
+					"05":"Japanese",
+					"06":"Hawaiian (includes Part-Hawaiian)",
+					"07":"Filipino",
+					"18":"Asian Indian",
+					"28":"Korean",
+					"38":"Samoan",
+					"48":"Vietnamese",
+					"58":"Guamanian",
+					"68":"Other Asian or Pacific Islander in areas reporting codes 18-58",
+					"78":"Combined other Asian or Pacific Isla"
+				}
+			},
+			"62":{
+				"es_field_name": "Race_Recode_3",
+				"field_size": 1,
+				"definition": "Race Recode 3",
+				"values":{
+					"1": "White",
+					"2": "Races other than Whate or Black",
+					"3": "Black"
+				}
+			},
+			"63":{
+				"es_field_name": "Race_Recode_2",
+				"definition": "Race Recode 2",
+				"values":{
+					"1": "White",
+					"2": "All other races"
+				}
+			},
+			"64":{
+				"es_field_name": "Detail_Age_1",
+				"dev_note": "Split from Tape Location 64-66 since they are treated as separate values",
+				"field_size": 1,
+				"definition": "Detail Age",
+				"summary": "Three positions are used to code detail age. Location 64 identifies age in years, months, days, etc. Locations 65-66 are the number of years, months, days, etc.",
+				"values":{
+					"0":" 01-99 ... Years less than 100",
+					"1":" 00-99 ... Years 100 or more",
+					"2":" 01-11,99 ... Months",
+					"3":" 01-03,99 ... Weeks",
+					"4":" 01-27,99 ... Days",
+					"5":" 01-23, 99 ... Hours",
+					"6":" 01-59, 99 ... Minutes",
+					"9":" 99 ... Age not stated"
+				}
+			},
+			"65":{
+				"es_field_name": "Detail_Age_2",
+				"dev_note": "Split from Tape Location 64-66 since they are treated as separate values",
+				"field_size": 1,
+				"definition": "Detail Age 2",
+				"summary": "Three positions are used to code detail age. Location 64 identifies age in years, months, days, etc. Locations 65-66 are the number of years, months, days, etc.",
+				"values":{
+					"0":" 01-99 ... Years less than 100",
+					"1":" 00-99 ... Years 100 or more",
+					"2":" 01-11,99 ... Months",
+					"3":" 01-03,99 ... Weeks",
+					"4":" 01-27,99 ... Days",
+					"5":" 01-23, 99 ... Hours",
+					"6":" 01-59, 99 ... Minutes",
+					"9":" 99 ... Age not stated"
+				}
+			},
+			"66":{
+				"es_field_name": "Detail_Age_3",
+				"dev_note": "Split from Tape Location 64-66 since they are treated as separate values",
+				"field_size": 1,
+				"definition": "Detail Age",
+				"summary": "Three positions are used to code detail age. Location 64 identifies age in years, months, days, etc. Locations 65-66 are the number of years, months, days, etc.",
+				"values":{
+					"0":" 01-99Years less than 100",
+					"1":" 00-99 ... Years 100 or more",
+					"2":" 01-11,99 ... Months",
+					"3":" 01-03,99 ... Weeks",
+					"4":" 01-27,99 ... Days",
+					"5":" 01-23, 99 ... Hours",
+					"6":" 01-59, 99 ... Minutes",
+					"9":" 99 ... Age not stated"
+				}
+			},
+			"67-68":{
+				"es_field_name": "Age_Recode_52",
+				"definition": "Age Recode 52",
+				"values":{
+					"01":"Under 1 hour (includes not stated hours and minutes)",
+					"02":"1 - 23 hours",
+					"03":"1 day (includes not stated days)",
+					"04":"2 days",
+					"05":"3 days",
+					"06":"4 days",
+					"07":"5 days",
+					"08":"6 days",
+ 					"09":"7 - 13 days (includes not stated weeks)",
+					"10":"14 - 20 days",
+					"11":"21 - 27 days",
+					"12":"1 month (includes not stated months)",
+ 					"13":"2 months",
+					"14":"3 months",
+					"15":"4 months",
+					"16":"5 months",
+					"17":"6 months",
+					"18":"7 months",
+ 					"19":"8 months",
+					"20":"9 months",
+					"21":"10 months",
+					"22":"11 months",
+					"23":"1 year",
+					"24":"2 years",
+					"25":"3 years",
+					"26":"4 years ",
+					"27":"5 - 9 years",
+					"28":"10 - 14 years",
+					"29":"15 - 19 years",
+					"30":"20 - 24 years",
+					"31":"25 - 29 years",
+					"32":"30 - 34 years",
+					"33":"35 - 39 years",
+					"34":"40 - 44 years",
+					"35":"45 - 49 years",
+					"36":"50 - 54 years",
+					"37":"55 - 59 years",
+					"38":"60 - 64 years",
+					"39":"65 - 69 years",
+					"40":"70-74 years",
+					"41":"75-79 years",
+					"42":"80 - 84 years",
+					"43":"85 - 89 years",
+					"44":"90 - 94 years",
+					"45":"95 - 99 years",
+					"46":"100 - 104 years",
+					"47":"105 - 109 years",
+					"48":"110 - 114 years",
+					"49":"115 - 119 years",
+					"50":"120 - 124 years",
+					"51":"125 years and over",
+					"52":"Age not stated"
+				}
+			},
+			"69-70":{
+				"es_field_name": "Age_Recode_27",
+				"field_size": 2,
+				"definition": "Age Recode 27",
+				"values":{
+					"01":"Under 1 month (includes not stated weeks, days, hours, and minutes)",
+					"02":"1 month - 11 months (includes not stated months)",
+ 					"03":"1 years",
+					"04":"2 years",
+					"05":"3 years",
+					"06":"4 years",
+					"07":"5 - 9 years",
+					"08":"10 - 14 years",
+ 					"09":"15 - 19 years",
+					"10":"20 - 24 years",
+					"11":"25 - 29 years",
+					"12":"30 - 34 years",
+					"13":"35 - 39 years",
+					"14":"40 - 44 years",
+					"15":"45 - 49 years",
+					"16":"50 - 54 years",
+					"17":"55 - 59 years",
+					"18":"60 - 64 years",
+					"19":"65 - 69 years",
+					"20":"70 - 74 years",
+					"21":"75 - 79 years",
+					"22":"80 - 84 years",
+					"23":"85 - 89 years",
+					"24":"90 - 94 years",
+					"25":"95 - 99 years",
+					"26":"100 years and over",
+					"27":"Age not stated "
+				}
+			},
+			"71-72":{
+				"es_field_name": "Age_Recode_12",
+				"field_size": 2,
+				"definition": "Age Recode 12",
+				"values":{
+					"01":"Under 1 year (includes not stated infant ages)",
+					"02":"1 - 4 years",
+					"03":"5 - 14 years",
+					"04":"15 - 24 years",
+					"05":"25 - 34 years",
+					"06":"35 - 44 years",
+					"07":"45 - 54 years",
+					"08":"55 - 64 years",
+					"09":"65 - 74 years",
+					"10":"75 - 84 years",
+ 					"11":"85 years and over",
+					"12":"Age not stated"
+				}
+			},
+			"73-74":{
+				"es_field_name": "Infant_Age_Recode_22",
+				"field_size": 2,
+				"definition": "Infant Age Recode 22",
+				"values":{
+					"Blank":"Age 1 year and over or not stated",
+					"01":"Under 1 hour (includes not stated hours and minutes)",
+					"02":"1 - 23 hours",
+ 					"03":"1 day (includes not stated days)",
+ 					"04":"2 days",
+					"05":"3 days",
+					"06":"4 days",
+					"07":"5 days",
+					"08":"6 days",
+					"09":"7 days (includes not stated weeks)",
+					"10":"14 - 20 days",
+					"11":"21 - 27 days",
+					"12":"1 month (includes not stated months)",
+					"13":"2 months",
+					"14":"3 months",
+					"15":"4 months",
+					"16":"5 months",
+					"17":"6 months ",
+					"18":"7 months",
+					"19":"8 months",
+					"20":"9 months",
+					"21":"10 months",
+					"22":"11 months"
+				}
+			},
+			"75":{
+				"es_field_name": "Place_of_Death_and_Decedent_Status",
+				"field_size": 1,
+				"definition": "Place of Death and Decedent=s Status",
+				"values":{
+					"1":"Hospital, clinic or Medical Center - Inpatient",
+					"2":"Hospital, Clinic or Medical Center - Outpatient or admitted to Emergency Room",
+					"3":"Hospital, Clinic or Medical Center - Dead on Arrival",
+					"4":"Hospital, Clinic or Medical Center - Patient status unknown",
+					"5":"Nursing home",
+					"6":"Residence",
+					"7":"Other",
+					"9":"Place of death unknown" 
+				}
+			},
+			"76":{
+				"es_field_name": "RESERVED",
+				"field_size": 1,
+				"definition": "Reserved",
+				"summary": "blank"
+
+			},
+			"77":{
+				"es_field_name": "Maritial_Status",
+				"field_size": 1,
+				"definition": "Marital Status",
+				"values":{
+					"1":"Never married, single",
+					"2":"Married",
+					"3":"Widowed",
+					"4":"Divorced",
+					"8":"Marital Status not on certificate",
+					"9":"Marital Status not stated"
+				}
+			},
+			"78-79":{
+				"es_field_name": "State_of_Birth",
+				"definition": "State of Birth",
+				"values":{
+					"01":"Alabama",
+					"02":"Alaska",
+					"03":"Arizona",
+ 					"04":"Arkansas",
+					"05":"California",
+					"06":"Colorado",
+					"07":"Connecticut",
+					"08":"Delaware",
+					"09":"District of Columbia",
+					"10":"Florida",
+					"11":"Georgia",
+					"12":"Hawaii",
+					"13":"Idaho",
+					"14":"Illinois",
+					"15":"Indiana",
+					"16":"Iowa",
+					"17":"Kansas",
+					"18":"Kentucky",
+					"19":"Louisiana",
+					"20":"Maine",
+					"21":"Maryland",
+					"22":"Massachusetts",
+					"23":"Michigan",
+					"24":"Minnesota",
+					"25":"Mississippi",
+					"26":"Missouri",
+					"27":"Montana",
+					"28":"Nebraska",
+					"29":"Nevada",
+					"30":"New Hampshire",
+					"31":"New Jersey",
+					"32":"New Mexico",
+					"33":"New York",
+					"34":"North Carolina",
+					"35":"North Dakota",
+					"36":"Ohio",
+					"37":"Oklahoma",
+					"38":"Oregon",
+					"39":"Pennsylvania",
+					"40":"Rhode Island",
+					"41":"South Carolina",
+					"42":"South Dakota",
+					"43":"Tennessee",
+					"44":"Texas",
+					"45":"Utah",
+					"46":"Vermont",
+ 					"47":"Virginia",
+					"48":"Washington",
+					"49":"West Virginia",
+ 					"50":"Wisconsin",
+					"51":"Wyoming",
+					"52":"Puerto Rico",
+					"53":"Virgin Island",
+					"54":"Guam",
+					"55":"Canada",
+					"56":"Cuba",
+					"57":"Mexico",
+					"59":"Remainder of the world",
+					"61":"American Samoa",
+					"62":"Northern Marianas",
+					"99":"State of birth unknown"
+				}
+			},
+			"80-81":{
+				"es_field_name": "Hispanic_Origin",
+				"field_size": 2,
+				"definition": "Hispanic Origin",
+				"values":{
+					"00":"Non - Hispanic",
+					"01":"Mexican",
+					"02":"Puerto Rican",
+					"03":"Cuban",
+					"04":"Central or South American",
+					"05":"Other or unknown Hispanic",
+					"99":"Unknown"
+				}
+			},
+			"82":{
+				"es_field_name": "Hispanic_Origin_Race_Recode",
+				"field_size": 1,
+				"definition": "Hispanic Origin/Race Recode",
+				"values":{
+					"1":"Mexican",
+					"2":"Puerto Rican",
+					"3":"Cuban",
+					"4":"Central or South American",
+					"5":"Other or unknown Hispanic",
+					"6":"Non - Hispanic white",
+					"7":"Non - Hispanic black",
+					"8":"Non - Hispanic other races",
+					"9":"Hispanic origin unknown"
+				}
+			},
+			"83":{
+				"es_field_name": "Day_of_Week_of_Death",
+				"field_size": 1,
+				"definition": "Day of Week of Death",
+				"values":{
+					"1":"Sunday",
+					"2":"Monday",
+					"3":"Tuesday",
+					"4":"Wednesday",
+					"5":"Thursday",
+ 					"6":"Friday",
+					"7":"Saturday",
+					"9":"Unknown"
+				}
+			},
+			"84":{
+				"es_field_name": "RESERVED",
+				"field_size": 1,
+				"definition": "Reserved Position",
+				"summary": "blank"
+			},
+			"85-87":{
+				"es_field_name": "Kind_of_Business_or_Industry",
+				"dev_note": "The values for this location have to be read from an external file except for the ones listed here. See summary.",
+				"field_size": 3,
+				"definition": "Kind of Business or Industry",
+				"summary": "This item is not reported by all States. Refer to the Addendum to the Technical Appendix at the back of this publication for a list of reporting States. A new coding structure was instituted for the 1993 data year. For a complete list of categories and codes refer to: U.S. Bureau of the Census: Classified index of industries and occupations. 1990 Census of Population and Housing. First Edition. Washington. U.S. Government Printing Office, April 1992. ",
+				"values":{
+					"961": "Own home/At home",
+					"970": "Retired; with no other industry reported",
+ 					"990": "Blank, Unknown, NA"
+
+				}
+			},
+			"88-90":{
+				"es_field_name": "Usual_Occupation",
+				"dev_note": "The values for this location have to be read from an external file except for the ones listed here. See summary.",
+				"field_size": 3,
+				"definition": "Usual Occupation",
+				"summary": "This item is not reported by all States. Refer to the Addendum to the Technical Appendix at the back of this publication for a list of reporting States. A new coding structure was instituted for the 1993 data year. For a complete list of categories and codes refer to the Census Bureau publication mentioned above.",
+				"values": {
+					"913": "Retired; with no other occupation reported",
+					"914": "Housewife/Homemaker",
+					"915": "Student",
+					"916": "Volunteer",
+					"917": "Unemployed, never worked, disabled, child, infant",
+					"999": "Blank, Unknown, NA"
+				}
+			},
+			"91-96":{
+				"es_field_name": "RESERVED",
+				"definition": "Reserved Positions",
+				"summary": "blank"
+			},
+			"97-101":{
+				"es_field_name": "FIPS_city_of_Residence",
+				"dev_note": "The values for this location have to be read from an external file except for the ones listed here. See summary.",
+				"field_size": 5,
+				"definition": "Place (city) of Residence (FIPS)",
+				"summary" : "A complete list of cities is shown in the Geographic code outline further back in this document. Effective with the 1994 data year, the FIPS place code has been added to the Mortality record. It identifies each city of 100,000 population or more in 1990.",
+				"values":{
+					"00000": "Foreign residents",
+					"99999": "Balance of county; or city of less than 100,000 population"
+				}
+			},
+			"102-114":{
+				"es_field_name": "RESERVED",
+				"definition": "Reserved Positions",
+				"summary": "blank"
+			},
+			"115-118":{
+				"es_field_name": "Current_Data_Year",
+				"field_size": 4,
+				"definition": "Current Data Year"
+			},
+			"119-120":{
+				"es_field_name": "FIPS_State_of_Occurrence",
+				"field_size":2,
+				"definition": "State of Occurrence (FIPS)",
+				"values":{
+					"01":"Alabama",
+					"02":"Alaska",
+					"04":"Arizona",
+					"05":"Arkansas",
+					"06":"California",
+					"08":"Colorado",
+ 					"09":"Connecticut",
+					"10":"Delaware",
+					"11":"District of Columbia",
+					"12":"Florida",
+					"13":"Georgia",
+					"15":"Hawaii",
+ 					"16":"Idaho",
+					"17":"Illinois",
+					"18":"Indiana",
+					"19":"Iowa",
+					"20":"Kansas",
+					"21":"Kentucky", 
+					"22":"Louisiana",
+					"23":"Maine",
+					"24":"Maryland",
+					"25":"Massachusetts",
+					"26":"Michigan",
+					"27":"Minnesota",
+					"28":"Mississippi",
+					"29":"Missouri",
+					"30":"Montana",
+					"31":"Nebraska",
+					"32":"Nevada",
+					"33":"New Hampshire",
+					"34":"New Jersey",
+					"35":"New Mexico",
+					"36":"New York",
+					"37":"North Carolina",
+					"38":"North Dakota",
+					"39":"Ohio",
+					"40":"Oklahoma",
+					"41":"Oregon",
+					"42":"Pennsylvania",
+					"44":"Rhode Island",
+					"45":"South Carolina",
+					"46":"South Dakota",
+					"47":"Tennessee",
+					"48":"Texas",
+					"49":"Utah",
+					"50":"Vermont",
+					"51":"Virginia",
+					"53":"Washington",
+					"54":"West Virginia",
+					"55":"Wisconsin",
+					"56":"Wyoming",
+					"72":"Puerto Rico", 
+					"78":"Virgin Islands",
+					"66":"Guam",
+					"60":"American Samoa",
+					"69":"Northern Marianas"
+				}
+			},
+			"121-123":{
+				"es_field_name": "FIPS_County_of_Occurrence",
+				"dev_note": "This needs to be built from a larger table except for the coverall code in values. See summary.",
+				"field_size": 3,
+				"definition": "County of Occurrence (FIPS)",
+				"summary": "Counties and county equivalents (independent and coextensive cities) are numbered alphabetically within each State and identify each county with a population of 100,000 or more in 1990. (Note: To uniquely identify a county, both the state and county codes must be used.) A complete list of counties is shown in the Geographic Code Outline further back in this document.",
+				"values":{
+					"999": "County of less than 100,000 population"
+				}
+			},
+			"124-125":{
+				"es_field_name": "FIPS_State_of_Residence",
+				"field_size": 2,
+				"definition": "State of Residence (FIPS)",
+				"values":{
+					"00":"Foreign residents",
+					"01":"Alabama",
+					"02":"Alaska",
+					"04":"Arizona",
+					"05":"Arkansas",
+					"06":"California",
+					"08":"Colorado",
+					"09":"Connecticut",
+					"10":"Delaware",
+					"11":"District of Columbia",
+					"12":"Florida",
+					"13":"Georgia",
+					"15":"Hawaii",
+					"16":"Idaho",
+					"17":"Illinois",
+					"18":"Indiana",
+					"19":"Iowa",
+					"20":"Kansas",
+					"21":"Kentucky",
+					"22":"Louisiana",
+					"23":"Maine",
+ 					"24":"Maryland",
+					"25":"Massachusetts",
+ 					"26":"Michigan",
+					"27":"Minnesota",
+					"28":"Mississippi",
+					"29":"Missouri",
+					"30":"Montana",
+					"31":"Nebraska",
+					"32":"Nevada",
+					"33":"New Hampshire",
+					"34":"New Jersey",
+					"35":"New Mexico",
+					"36":"New York",
+					"37":"North Carolina",
+					"38":"North Dakota",
+					"39":"Ohio",
+					"40":"Oklahoma",
+					"41":"Oregon",
+					"42":"Pennsylvania",
+					"44":"Rhode Island",
+					"45":"South Carolina",
+					"46":"South Dakota",
+					"47":"Tennessee",
+					"48":"Texas",
+					"49":"Utah",
+					"50":"Vermont",
+					"51":"Virginia",
+					"53":"Washington",
+					"54":"West Virginia",
+					"55":"Wisconsin",
+					"56":"Wyoming ",
+					"72":"Puerto Rico",
+					"78":"Foreign residents: refer to U.S. for specific code structure."
+				}
+			},
+			"126-128":{
+				"es_field_name": "FIPS_County_of_Residence",
+				"field_size": 3,
+				"dev_note": "The values for this location have to be read from an external file except for the ones listed here. See summary.",
+				"definition": "County of Residence (FIPS)",
+				"summary": "Counties and county equivalents (independent and coextensive cities) are numbered alphabetically within each State and identify each county with a population of 100,000 or more in 1990. (Note: To uniquely identify a county, both the state and county codes must be used.) A complete list of counties is shown in the Geographic Code Outline further back in this document",
+				"values":{
+					"000": "Foreign residents",
+					"999": "County of less than 100,000 population"
+				}
+			},
+			"129-132":{
+				"es_field_name": "FIPS_PMSA_MSA_of_Residence",
+				"field_size": 4,
+				"definition": "PMSA/MSA of Residence (FIPS)",
+				"dev_note": "The values for this location have to be read from an external file except for the ones listed here. See summary.",
+				"summary": "Primary Metropolitan Statistical Areas and Metropolitan Statistical Areas are those defined by the U.S. Office of Management and Budget (OMB) as of 1990. For New England, the New England County Metropolitan Areas (NECMA) are used. Further back in this docuent is a list of PMSA=s, MSA=s, NECMA=s, and their component counties. "
+			},
+			"133":{
+				"es_field_name": "RESERVED",
+				"field_size": 1,
+				"definition": "Reserved Position",
+				"summary": "blank"
+			},
+			"134-135":{
+				"es_field_name": "FIPS_CMSA_of_Residence",
+				"field_size": 2,
+				"definition": "CMSA of Residence (FIPS)",
+				"values":{
+					"00":"Not a CMSA",
+					"07":"Boston - Worcester-Lawrence, MA-NH-ME-CT, CMSA",
+					"14":"Chicago - Gary-Kenosha, IL-IN-WI, CMSA",
+					"21":"Cincinnati - Hamilton, OH-KY-IN, CMSA",
+					"28":"Cleveland - Akron, OH, CMSA",
+					"31":"Dallas - Fort Worth, TX, CMSA",
+					"34":"Denver - Boulder-Greeley, CO, CMSA",
+					"35":"Detroit - Ann Arbor-Flint, MI, CMSA",
+					"42":"Houston - Galveston-Brazoria, TX, CMSA",
+					"49":"Los Angeles -Riverside- Orange County, CA, CMSA",
+					"56":"Miami - Fort Lauderdale, FL, CMSA",
+					"63":"Milwaukee - Racine, WI, CMSA",
+					"70":"New York -Northern New Jersey-Long Island, NY-NJ-CT-PA, CMSA",
+					"77":"Philadelphia - Wilmington-Atlantic City, PA-NJ-DE-MD. CMSA",
+					"79":"Portland - Salem , OR-WA, CMSA",
+					"82":"Sacremento - Yolo, CA, CMSA",
+					"84":"San Francisco -Oakland-San Jose, CA, CMSA",
+					"91":"Seattle - Tacoma-Bremerton, WA, CMSA",
+					"97":"Washington - Baltimore, DC-MD-VA-WV, CMSA",
+					"87":"San Juan -Caguas-Arecibo, PR, CMSA"
+				}
+			},
+			"136":{
+				"es_field_name": "Injury_at_Work",
+				"field_size": 1,
+				"definition": "Injury at Work",
+				"values":{
+					"1": "Yes",
+					"2": "No",
+					"9": "Unnown"
+				}
+			},
+			"137":{
+				"es_field_name": "Race_Impuration_Flag",
+				"field_size": 1,
+				"definition": "Race Imputation Flag",
+				"values":{
+					"blank": "Race is not imputed",
+					"1": "Unknown race is imputed",
+					"2": "All other races, formerly code 09, is imputed"
+				}
+			},
+			"138":{
+				"es_field_name": "Age_Substitution_Flag",
+				"field_size": 1,
+				"definition": "Age Substitution Flag",
+				"summary": "If reported age is unknown but a valid age is calculated using dates of birth and death, the calculated age is substituted for the unknown reported age",
+				"values":{
+					"1": "Calculated age is substituted for reported age"
+				}
+			},
+			"139":{
+				"es_field_name": "Manner_of_Death",
+				"field_size": 1,
+				"definition": "Manner of Death",
+				"values": {
+					"1":"Accident",
+					"2":"Suicide",
+					"3":"Homicide",
+					"4":"Pending investigation",
+					"5":"Could not determine",
+					"6":"Self-Inflicted",
+					"7":"Natural",
+					"blank":"Not specified"
+				}
+			},
+			"140":{
+				"es_field_name": "Activity_Code",
+				"field_size": 1,
+				"definition": "Activity Code",
+				"values":{
+					"0":"While engaged in sports activity",
+					"1":"While engaged in leisure activity",
+					"2":"While working for income",
+					"3":"While engaged in other types of work",
+					"4":"While resting, sleeping, eating (vital activities)",
+					"8":"While engaged in other specified activities",
+					"9":"During unspecified activity",
+					"blank":"Not applicable"
+				}
+			},
+			"141":{
+				"es_field_name": "Place_of_Injury",
+				"field_size": 1,
+				"definition": "Place of Injury for Causes W00-Y34, except Y06.- and Y07.-",
+				"values":{
+					"0":"Home",
+					"1":"Residential institution",
+					"2":"School, other institution and public administrative area",
+					"3":"Sports and athletics area",
+					"4":"Street and highway",
+					"5":"Trade and service area",
+					"6":"Industrial and construction area",
+					"7":"Farm",
+					"8":"Other Specified Places",
+					"9":"Unspecified place",
+					"Blank":"Causes other than W00-Y34, except Y06.- and Y07.-"
+				}
+			},
+			"142-145":{
+				"es_field_name": "IDC10_Code_10th",
+				"dev_note": "This has to be loaded from an external file. See summary",
+				"field_size": 4,
+				"definition": "ICD Code (10th Revision)",
+				"summary": "See the International Classification of Diseases, 1992 Revision, Volume 1."
+			},
+			"146-148":{
+				"es_field_name": "Cause_Recode_358",
+				"dev_note": "This has to be loaded from an external file. See summary",
+				"field_size": 3,
+				"definition": "358 Cause Recode",
+				"summary": "A recode of the ICD cause code into 358 groups for NCHS publications. Further back in this document is a complete list of recodes and the causes included. "
+			},
+			"149-150":{
+				"es_field_name": "RESERVED",
+				"field_size": 2,
+				"definition": "Reserved Positions",
+				"summary": "blank"
+			},
+			"151-153":{
+				"es_field_name": "Cause_Recocde_113",
+				"dev_note": "This has to be loaded from an external file. See summary",
+				"field_size": 3,
+				"definition": "113 Cause Recode",
+				"summary": "A recode of the ICD cause code into 113 groups for NCHS publications. Further back in this document is a complete list of recodes and the causes included."
+			},
+			"154-156":{
+				"es_field_name": "Infant_Cause_Recode_130",
+				"dev_note": "This has to be loaded from an external file. See summary",
+				"field_size": 3,
+				"definition": "130 Infant Cause Recode",
+				"summary": "A recode of the ICD cause code into 130 groups for NCHS publications. Further back in this document is a complete list of recodes and the causes included. "
+			},
+			"157-158":{
+				"es_field_name": "Cause_Recode_39",
+				"dev_note": "This has to be loaded from an external file. See summary",
+				"field_size": 2,
+				"definition": "39 Cause Recode",
+				"summary": "A recode of the ICD cause code into 39 groups for NCHS publications. Further back in this document is a complete list of recodes and the causes included. "
+			},
+			"159":{
+				"es_field_name": "RESERVED",
+				"field_size": 1,
+				"definition": "Reserved Positions",
+				"summary": "blank"
+			},
+			"160-161":{
+				"es_field_name": "Number_of_Endity_Axis_Conditions",
+				"field_size": 2,
+				"definition": "Number of Entity-Axis Conditions",
+				"summary": "Count of total conditions that should be listed at 162-301"
+			},
+			"162-168":{
+				"es_field_name": "Entity_Axis_Contion_1",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "1st Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+
+			},
+			"169-175":{
+				"es_field_name": "Entity_Axis_Contion_2",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "2nd Entity EAxis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"176-182":{
+				"es_field_name": "Entity_Axis_Contion_3",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "3rd Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"183-189":{
+				"es_field_name": "Entity_Axis_Contion_4",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "4th Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"190-196":{
+				"es_field_name": "Entity_Axis_Contion_5",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "5th Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"197-203":{
+				"es_field_name": "Entity_Axis_Contion_6",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "6th Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"204-210":{
+				"es_field_name": "Entity_Axis_Contion_7",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "7th Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"211-217":{
+				"es_field_name": "Entity_Axis_Contion_8",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "8th Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"218-224":{
+				"es_field_name": "Entity_Axis_Contion_9",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "9th Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"225-231":{
+				"es_field_name": "Entity_Axis_Contion_10",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "10th Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"232-238":{
+				"es_field_name": "Entity_Axis_Contion_11",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "11th Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"239-245":{
+				"es_field_name": "Entity_Axis_Contion_12",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "12th Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"246-252":{
+				"es_field_name": "Entity_Axis_Contion_13",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "13th Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"253-259":{
+				"es_field_name": "Entity_Axis_Contion_14",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "14th Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"260-266":{
+				"es_field_name": "Entity_Axis_Contion_15",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "15th Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"267-273":{
+				"es_field_name": "Entity_Axis_Contion_16",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "16th Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"274-280":{
+				"es_field_name": "Entity_Axis_Contion_17",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "17th Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"281-287":{
+				"es_field_name": "Entity_Axis_Contion_18",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "18th Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"288-294":{
+				"es_field_name": "Entity_Axis_Contion_19",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "19th Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"295-301":{
+				"es_field_name": "Entity_Axis_Contion_10",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code.",
+				"field_size": 7,
+				"definition": "20th Entity Axis Condition",
+				"position":{
+					"1": "Part I, line 1 (a)",
+					"2": "Part I, line 2 (b)",
+					"3": "Part I, line 3 (c)",
+					"4": "Part I, line 4 (d)",
+					"5": "Part I, line 5 (e)",
+					"6": "Part II"
+				}
+			},
+			"302-337":{
+				"es_field_name": "RESERVED",
+				"field_size": 36,
+				"definition": "Reserved Positions",
+				"summary": "blank"
+			},
+			"338-339":{
+				"es_field_name": "Number_of_Record_Axis_Conditons",
+				"field_size": 2,
+				"definition": "Number of Record-Axis Conditions"
+
+			},
+			"340":{
+				"es_field_name": "RESERVED",
+				"definition": "Reserved",
+				"summary": "Reserved Position (TRANSAX flag)"
+			},
+			"341-345":{
+				"es_field_name": "Record_Axis_Condition_1",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "1st Record Axis Condition"
+				}
+			},
+			"346-350":{
+				"es_field_name": "Record_Axis_Condition_2",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "2nd Record Axis Condition"
+			},
+			"351-355":{
+				"es_field_name": "Record_Axis_Condition_3",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "3rd Record Axis Condition"
+			},
+			"356-360":{
+				"es_field_name": "Record_Axis_Condition_4",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "4th Record Axis Condition"
+			},
+			"361-365":{
+				"es_field_name": "Record_Axis_Condition_5",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "5th Record Axis Condition"
+			},
+			"366-370":{
+				"es_field_name": "Record_Axis_Condition_6",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "6th Record Axis Condition"
+			},
+			"371-375":{
+				"es_field_name": "Record_Axis_Condition_7",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "7th Record Axis Condition"
+			},
+			"376-380":{
+				"es_field_name": "Record_Axis_Condition_8",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "8th Record Axis Condition"
+			},
+			"381-385":{
+				"es_field_name": "Record_Axis_Condition_9",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "9th Record Axis Condition"
+			},
+			"386-390":{
+				"es_field_name": "Record_Axis_Condition_10",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "10th Record Axis Condition"
+			},
+			"391-395":{
+				"es_field_name": "Record_Axis_Condition_11",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "11th Record Axis Condition"
+			},
+			"396-400":{
+				"es_field_name": "Record_Axis_Condition_12",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "12th Record Axis Condition"
+			},
+			"401-405":{
+				"es_field_name": "Record_Axis_Condition_13",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "13th Record Axis Condition"
+			},
+			"406-410":{
+				"es_field_name": "Record_Axis_Condition_14",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "14th Record Axis Condition"
+			},
+			"411-415":{
+				"es_field_name": "Record_Axis_Condition_15",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "15th Record Axis Condition"
+			},
+			"416-420":{
+				"es_field_name": "Record_Axis_Condition_16",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "16th Record Axis Condition"
+			},
+			"421-425":{
+				"es_field_name": "Record_Axis_Condition_17",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "17th Record Axis Condition"
+			},
+			"426-430":{
+				"es_field_name": "Record_Axis_Condition_18",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "18th Record Axis Condition"
+			},
+			"431-435":{
+				"es_field_name": "Record_Axis_Condition_19",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "19th Record Axis Condition"
+			},
+			"436-440":{
+				"es_field_name": "Record_Axis_Condition_20",
+				"dev_note": "These have to be decoded from the ICD10 tables.Position is Part/line number on certificate. Position 2 is the Sequence of condition within part/line. Position 3 is the ICD10 code. Position 5 should always be blank.",
+				"field_size": 5,
+				"definition": "20th Record Axis Condition"
+			}
+	}
+}
